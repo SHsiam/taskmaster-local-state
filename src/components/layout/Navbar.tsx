@@ -9,7 +9,7 @@ export default function Navbar() {
       </div>
 
       <Link to="/">Tasks</Link>
-      <Link to="/user">User</Link>
+      {/* <Link to="/user">User</Link> */}
       <div className="ml-auto">
         <ModeToggle />
       </div>

@@ -16,8 +16,8 @@ interface IProps {
 
 export default function TaskCard({ task }: IProps) {
   const dispatch = useAppDispatch();
-  const users = useAppSelector(selectUsers);
-  const assignedUser = users.find((user) => user.id === task.assignedTo);
+  // const users = useAppSelector(selectUsers);
+  // const assignedUser = users.find((user) => user.id === task.assignedTo);
   return (
     <div className="border px-5 py-3 rounded-md">
       <div className="flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function TaskCard({ task }: IProps) {
           />
         </div>
       </div>
-      <p>Assign To - {assignedUser ? assignedUser.name : "No One"}</p>
+      {/* <p>Assign To - {assignedUser ? assignedUser.name : "No One"}</p> */}
       <p className="mt-5">{task.description}</p>
     </div>
   );

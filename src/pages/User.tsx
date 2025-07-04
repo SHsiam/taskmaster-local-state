@@ -4,7 +4,7 @@ import { selectUsers } from "@/redux/features/user/userSlice";
 import { useAppSelector } from "@/redux/hook";
 
 export const User = () => {
-  const users = useAppSelector(selectUsers);
+  // const users = useAppSelector(selectUsers);
 
   return (
     <div className="mx-auto max-w-7xl px-5 mt-20">
@@ -13,9 +13,9 @@ export const User = () => {
         <AddUserModel />
       </div>
       <div className=" mt-5 flex flex-wrap justify-normal gap-5">
-        {users.map((user) => (
+        {/* {users.map((user) => (
           <UserCard user={user} key={user.id} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

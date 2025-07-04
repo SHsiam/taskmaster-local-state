@@ -22,7 +22,7 @@ const createTask = (taskData: DarftTask): ITask => {
     id: nanoid(),
     isCompleted: false,
     ...taskData,
-    assignedTo: taskData.assignedTo ? taskData.assignedTo : null,
+    // assignedTo: taskData.assignedTo ? taskData.assignedTo : null,
   };
 };
 
@@ -51,13 +51,13 @@ const taskSlice = createSlice({
       state.filter = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(removeUser, (state, action) => {
-      state.tasks.forEach((task) =>
-        task.assignedTo === action.payload ? (task.assignedTo = null) : task
-      );
-    });
-  },
+  // extraReducers: (builder) => {
+  //   builder.addCase(removeUser, (state, action) => {
+  //     state.tasks.forEach((task) =>
+  //       task.assignedTo === action.payload ? (task.assignedTo = null) : task
+  //     );
+  //   });
+  // },
 });
 
 export const selectTasks = (state: RootState) => {
